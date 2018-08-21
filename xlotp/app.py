@@ -58,10 +58,10 @@ def main_menu():
     clear()
     print(zydekenzou)
     print(p+
-        "   Tembak Xl Mode Otp" +
+        "   Tembak Paket XL terbaru" +
         "\nPilih Salah Satu:"
         "\n  [1] Beli Paket" + 
-        "\n  [2] OTP" +
+        "\n  [2] Minta kode OTP" +
         "\n  [3] Menu utama"
     )
     choice = str(input(" ex:1👉 "))
@@ -85,20 +85,20 @@ def menu_1():
     clear()
     print(zydekenzou)
     print(p+"Menu Beli Paket Xl")
-    msisdn = str(input("Masukan No 62xx 👉 "))
+    msisdn = str(input("Masukan Nomer HP ( contoh : 62xxx )"))
     clear()
     print(zydekenzou)
-    po = str(input(p+"Masukan Kode Otp 👉 "))
+    po = str(input(p+"Masukan Kode Otp "))
     clear()
     print(zydekenzou)
-    print (p+" 1.Xtra Kuota 30GB Rp. 10.000")
-    print (p+" 2.Xtra 3GB 30day 22.900 ")
-    print (p+" 3.Xtra 5GB 30day 32.900 ")
-    print (p+" 4.Xtra 9GB 30day 52.900 ")
-    print (p+" 5.Xtra 17GB 30day 82.900 ")
-    print (p+" 6.Xtra 25GB 30day 102.900 ")
+    print (p+" 1.Xtra Kuota 30GB 30 hari     | 10.000")
+    print (p+" 2.Xtra Combo Lite 3GB 30hari  | 22.900 ")
+    print (p+" 3.Xtra Combo Lite 5GB 30hari  | 32.900 ")
+    print (p+" 4.Xtra Combo Lite 9GB 30hari  | 52.900 ")
+    print (p+" 5.Xtra Combo Lite 17GB 30hari | 82.900 ")
+    print (p+" 6.Xtra Combo Lite 25GB 30hari | 102.900 ")
     print (p+" 7.Kuota 700mb 10k")
-    print (p+" 8.xtra 10GB 30day 59k")
+    print (p+" 8.Combo Xtra biasa 10GB 30hari| 59.000")
     print (p+" 9.Manual service id")
     pkt = str(input("Pilih Sesuai Keinginan >> "))
     

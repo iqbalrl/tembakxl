@@ -58,13 +58,13 @@ def main_menu():
        clear()
        slowprint(W + '            -== '+gt+'Zydekenzou'+W+' ==-')
        print(W + '# ' + str(time.strftime('%a, %d %B %Y')))
-       print(W + '# Provider gsm Operator ' + C + str(os.popen('getprop gsm.operator.alpha').read().split('\n')[0]))
+       print(W + '# Hanya Untuk Provider ' + C + str(os.popen('getprop gsm.operator.alpha').read().split('\n')[0]))
        print(W + '# Python ' + C + str(pv) + W + ', ' + C + str(os.popen('getprop ro.product.device').read().split('\n')[0]) + ' ' + str(os.popen('getprop ro.build.version.release').read().split('\n')[0]) + ' Build SDK ' + str(os.popen('getprop ro.build.version.sdk').read().split('\n')[0]))
        print(W + '#'*45)
        
        
        slowprint (gt+"Menu Pilihan:")
-       print (gt+"  ["+p+"1"+gt+"] "+p+"Tembak XL Work")
+       print (gt+"  ["+p+"1"+gt+"] "+p+"Menu Tembak")
        print (gt+"  ["+p+"2"+gt+"] "+p+"Telkomsel")
        print (gt+"  ["+p+"3"+gt+"] "+p+"Waktu")
        print (gt+"  ["+p+"0"+gt+"] "+p+"Keluar")
