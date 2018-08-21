@@ -1,31 +1,6 @@
-import os, sys, time, subprocess, socket, select, threading
+﻿import os, sys, time, subprocess, socket, select, threading
 from platform import python_version
 pv = python_version()
-
-g = "\033[32;1m"
-gt = "\033[0;32m"
-bt = "\033[34;1m"
-b = "\033[36;1m"
-m = "\033[31;1m"
-c = "\033[0m"
-p = "\033[37;1m"
-u = "\033[35;1m"
-M = "\033[3;1m"
-k = "\033[33;1m"
-kt = "\033[0;33m"
-a = "\033[30;1m"
-
-W = '\x1b[0m'
-R = '\x1b[31m'
-G = '\x1b[1;32m'
-O = '\x1b[33m'
-B = '\x1b[34m'
-P = '\x1b[35m'
-C = '\x1b[36m'
-GR = '\x1b[37m'
-
-
-   
 
 try:
     import platform
@@ -42,13 +17,13 @@ except KeyboardInterrupt:
 
 
        
-def slowaprint(s):
+def print(s):
     for c in s + '\n':
         sys.stdout.write(c)
         sys.stdout.flush()
         time.sleep(7.0 / 90)
 
-def slowprint(s):
+def print(s):
     for c in s + '\n':
         sys.stdout.write(c)
         sys.stdout.flush()
@@ -56,16 +31,12 @@ def slowprint(s):
       
 def main_menu():
        clear()
-       slowprint(W + '#'*45)
-       slowprint(W + '     -== '+gt+'Menu Termos Kumpul4semut'+W+' ==-')
-       slowprint(W + '#'*45)
-       print(W + '# ' + str(time.strftime('%a, %d %B %Y')))
-       print(W + '# Provider gsm Operator ' + C + str(os.popen('getprop gsm.operator.alpha').read().split('\n')[0]))
+\       print(W + '# Provider gsm Operator ' + C + str(os.popen('getprop gsm.operator.alpha').read().split('\n')[0]))
        print(W + '# Python ' + C + str(pv) + W + ', ' + C + str(os.popen('getprop ro.product.device').read().split('\n')[0]) + ' ' + str(os.popen('getprop ro.build.version.release').read().split('\n')[0]) + ' Build SDK ' + str(os.popen('getprop ro.build.version.sdk').read().split('\n')[0]))
        print(W + '#'*45)
        
        
-       slowprint (gt+"Menu Pilihan:")
+       print (gt+"Menu Pilihan:")
        print (gt+"  ["+p+"1"+gt+"] "+p+"Tembak XL Work")
        print (gt+"  ["+p+"2"+gt+"] "+p+"Telkomsel")
        print (gt+"  ["+p+"3"+gt+"] "+p+"Waktu")
@@ -76,7 +47,6 @@ def main_menu():
        choice = str(input(C+" Masukan Pilihan👉 "))
        exec_menu(choice)
        return
-       slowprint(W + '# ' + str(time.strftime('%a, %d %B %Y')))
 
 def exec_menu(choice):
     clear()
@@ -95,10 +65,10 @@ def menu_1():
    os.system('cd xlotp;python app.py')
 
 def menu_2():
-    slowaprint("loading")
+    print("loading")
     os.system('cd tsel;python app.py')
 def menu_3():
-    slowprint("loading")
+    print("loading")
     os.system('sh jam.sh;python app.py')
     return os.system('python app.py')
 
