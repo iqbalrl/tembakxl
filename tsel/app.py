@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+﻿# -*- coding: utf-8 -*-
 import os
 import sys
 import platform
@@ -39,25 +39,25 @@ def lodprint(s):
         sys.stdout.flush()
         time.sleep(7.0/90)
 
-semut=(gt+"""
- #####  ####### #     # #     # ####### 
-#     # #       ##   ## #     #    #    
-#       #       # # # # #     #    #    
- #####  #####   #  #  # #     #    #    
-      # #       #     # #     #    #    
-#     # #       #     # #     #    #    
- #####  ####### #     #  #####     #    
- =================================
+zydekenzou=(gt+"""
+ **                                             
+/**                                             
+/**  **  *****  *******  ******  ******  **   **
+/** **  **///**//**///**////**  **////**/**  /**
+/****  /******* /**  /**   **  /**   /**/**  /**
+/**/** /**////  /**  /**  **   /**   /**/**  /**
+/**//**//****** ***  /** ******//****** //******
+//  //  ////// ///   // //////  //////   ////// 
 """)
 l="Harap tunggu.."
 
 def main_menu():
     clear()
-    slowprints(semut)
-    print(p+"Telkomsel Menu" +
+    slowprints(zydekenzou)
+    print(p+"Menu Telkomsel" +
         "\nPilih Salah Satu:"
         "\n  [1] Minta kode otp" + 
-        "\n  [2] coming soon" 
+        "\n  [2] Belum tersedia (SEGERA)" 
     )
     choice = str(input(" ex:1👉 "))
     exec_menu(choice)
@@ -82,8 +82,8 @@ def menu_1():
 def menu_2():
     lodprint(l)
     clear()
-    print(semut)
-    print(m+"errrrrrrrrrroroorororororoororo")
+    print(zydekenzou)
+    print(m+"Udah dibilangin belum tersedia, jangan bandel dong!!")
     
 
 def exit():
