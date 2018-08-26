@@ -53,7 +53,7 @@ l="Harap tunggu.."
 
 def main_menu():
     clear()
-    slowprints(zydekenzou)
+    print(zydekenzou)
     print(p+"Menu Telkomsel" +
         "\nPilih Salah Satu:"
         "\n  [1] Minta kode otp" + 
