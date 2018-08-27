@@ -37,7 +37,7 @@ except Exception as err:
     os.system('pip install -r requirements.txt')
     os.system('python dor.py')()
 except KeyboardInterrupt:
-	  print (m+"[" + p + "Fail To Import" + m + "]")
+	  prints (m+"[" + p + "Fail To Import" + m + "]")
 	  sys.exit()
 
 
@@ -56,17 +56,17 @@ def print(s):
       
 def main_menu():
        clear()
-       print(W + '            -== '+gt+'Zydekenzou'+W+' ==-')
-       print(W + '# ' + str(time.strftime('%a, %d %B %Y')))
-       print(W + '# Hanya Untuk Provider ' + C + str(os.popen('getprop gsm.operator.alpha').read().split('\n')[0]))
-       print(W + '# Python ' + C + str(pv) + W + ', ' + C + str(os.popen('getprop ro.product.device').read().split('\n')[0]) + ' ' + str(os.popen('getprop ro.build.version.release').read().split('\n')[0]) + ' Build SDK ' + str(os.popen('getprop ro.build.version.sdk').read().split('\n')[0]))
-       print(W + '#'*45)
+       prints(W + '            -== '+gt+'Zydekenzou'+W+' ==-')
+       prints(W + '# ' + str(time.strftime('%a, %d %B %Y')))
+       prints(W + '# Hanya Untuk Provider ' + C + str(os.popen('getprop gsm.operator.alpha').read().split('\n')[0]))
+       prints(W + '# Python ' + C + str(pv) + W + ', ' + C + str(os.popen('getprop ro.product.device').read().split('\n')[0]) + ' ' + str(os.popen('getprop ro.build.version.release').read().split('\n')[0]) + ' Build SDK ' + str(os.popen('getprop ro.build.version.sdk').read().split('\n')[0]))
+       prints(W + '#'*45)
        
        
-       print (gt+"Menu Pilihan:")
-       print (gt+"  ["+p+"1"+gt+"] "+p+"Menu Tembak")
-       print (gt+"  ["+p+"2"+gt+"] "+p+"Waktu")
-       print (gt+"  ["+p+"0"+gt+"] "+p+"Keluar")
+       prints (gt+"Menu Pilihan:")
+       prints (gt+"  ["+p+"1"+gt+"] "+p+"Menu Tembak")
+       prints (gt+"  ["+p+"2"+gt+"] "+p+"Waktu")
+       prints (gt+"  ["+p+"0"+gt+"] "+p+"Keluar")
       
     
     
