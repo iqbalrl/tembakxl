@@ -30,12 +30,12 @@ GR = '\x1b[37m'
 
 
 
-def print(s):
+def slowprints(s):
     for c in s + '\n':
         sys.stdout.write(c)
         sys.stdout.flush()
         time.sleep(2.0/90)
-def print(s):
+def lodprint(s):
     for c in s + '\n':
         sys.stdout.write(c)
         sys.stdout.flush()
