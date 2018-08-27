@@ -37,18 +37,18 @@ except Exception as err:
     os.system('pip install -r requirements.txt')
     os.system('python dor.py')()
 except KeyboardInterrupt:
-	  prints (m+"[" + p + "Fail To Import" + m + "]")
+	  print (m+"[" + p + "Fail To Import" + m + "]")
 	  sys.exit()
 
 
        
-def print(s):
+def slowprint(s):
     for c in s + '\n':
         sys.stdout.write(c)
         sys.stdout.flush()
         time.sleep(7.0 / 90)
 
-def print(s):
+def slowprint(s):
     for c in s + '\n':
         sys.stdout.write(c)
         sys.stdout.flush()
@@ -63,17 +63,17 @@ def main_menu():
        prints(W + '#'*45)
        
        
-       prints (gt+"Menu Pilihan:")
-       prints (gt+"  ["+p+"1"+gt+"] "+p+"Menu Tembak")
-       prints (gt+"  ["+p+"2"+gt+"] "+p+"Waktu")
-       prints (gt+"  ["+p+"0"+gt+"] "+p+"Keluar")
+       slowprint (gt+"Menu Pilihan:")
+       print (gt+"  ["+p+"1"+gt+"] "+p+"Menu Tembak")
+       print (gt+"  ["+p+"2"+gt+"] "+p+"Waktu")
+       print (gt+"  ["+p+"0"+gt+"] "+p+"Keluar")
       
     
     
        choice = str(input(C+" Masukan Pilihan👉 "))
        exec_menu(choice)
        return
-       print(W + '# ' + str(time.strftime('%a, %d %B %Y')))
+       slowprint(W + '# ' + str(time.strftime('%a, %d %B %Y')))
 
 def exec_menu(choice):
     clear()
@@ -88,7 +88,7 @@ def exec_menu(choice):
     return
 
 def menu_1():
-   print("loading")
+   slowprint("loading")
    os.system('cd xlotp;python app.py')
 
 def menu_2():
