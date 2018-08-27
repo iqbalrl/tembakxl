@@ -30,12 +30,12 @@ GR = '\x1b[37m'
 
 
 
-def slowprints(s):
+def print(s):
     for c in s + '\n':
         sys.stdout.write(c)
         sys.stdout.flush()
         time.sleep(2.0/90)
-def lodprint(s):
+def print(s):
     for c in s + '\n':
         sys.stdout.write(c)
         sys.stdout.flush()
@@ -81,7 +81,7 @@ def exec_menu(choice):
     return
 
 def menu_1():
-    lodprint(l)
+    print(l)
     clear()
     print(zydekenzou)
     print(p+"Menu Beli Paket Xl")
@@ -122,7 +122,7 @@ def menu_1():
         i = str(input("Service ID Paket👉"))
     else:
         print("Pilihan gak tercantum")
-    lodprint(l)
+    print(l)
     serviceid = i
     xl = XL(msisdn)
     r = xl.loginWithOTP(po)
@@ -132,12 +132,12 @@ def menu_1():
         menu_actions['main']() if(decision in ['N','n']) else menu_actions['1']()
         
 def menu_2():
-    lodprint(l)
+    print(l)
     clear()
     print(zydekenzou)
     print(p+"Minta Kode Otp")
     msisdn = str(input("Masukan Nomor 62xx👉"))
-    lodprint(l)
+    print(l)
     xl = XL(msisdn)
     print(xl.reqOTP()['message'])
     decision = str(input(p+"Ulangi Proses[Y/N]? 👉 "))
@@ -154,7 +154,7 @@ def menu_4():
     return
 
 def menu_3():
-     lodprint(l)
+     print(l)
      os.system('cd ..;python dor.py')
 
 
