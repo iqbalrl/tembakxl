@@ -42,13 +42,13 @@ except KeyboardInterrupt:
 
 
        
-def slowaprint(s):
+def print(s):
     for c in s + '\n':
         sys.stdout.write(c)
         sys.stdout.flush()
         time.sleep(7.0 / 90)
 
-def slowprint(s):
+def print(s):
     for c in s + '\n':
         sys.stdout.write(c)
         sys.stdout.flush()
@@ -65,8 +65,7 @@ def main_menu():
        
        print (gt+"Menu Pilihan:")
        print (gt+"  ["+p+"1"+gt+"] "+p+"Menu Tembak")
-       print (gt+"  ["+p+"2"+gt+"] "+p+"Telkomsel")
-       print (gt+"  ["+p+"3"+gt+"] "+p+"Waktu")
+       print (gt+"  ["+p+"2"+gt+"] "+p+"Waktu")
        print (gt+"  ["+p+"0"+gt+"] "+p+"Keluar")
       
     
@@ -74,7 +73,7 @@ def main_menu():
        choice = str(input(C+" Masukan Pilihan👉 "))
        exec_menu(choice)
        return
-       slowprint(W + '# ' + str(time.strftime('%a, %d %B %Y')))
+       print(W + '# ' + str(time.strftime('%a, %d %B %Y')))
 
 def exec_menu(choice):
     clear()
@@ -89,13 +88,10 @@ def exec_menu(choice):
     return
 
 def menu_1():
-   slowprint("loading")
+   print("loading")
    os.system('cd xlotp;python app.py')
 
 def menu_2():
-    slowaprint("loading")
-    os.system('cd tsel;python app.py')
-def menu_3():
     slowprint("loading")
     os.system('sh jam.sh;python app.py')
     return os.system('python app.py')
@@ -110,7 +106,6 @@ menu_actions = {
     "main" : main_menu,
     "1" : menu_1,
     "2" : menu_2,
-    "3" : menu_3,
     "0" : exit
 }
 
